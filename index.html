@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnTrack | Learn. Practice. Achieve.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#"><span class="brand-mark">L</span> LearnTrack</a>
+    <p class="nav-label">MENU</p>
+    <button class="nav-item active" data-view="dashboard">▦ <span>Dashboard</span></button>
+    <button class="nav-item" data-view="courses">▤ <span>My Courses</span></button>
+    <button class="nav-item" data-view="quizzes">☑ <span>Quizzes</span></button>
+    <button class="nav-item" data-view="certificates">♧ <span>Certificates</span></button>
+    <div class="sidebar-bottom">
+      <div class="mini-card"><strong>Keep learning!</strong><p>Small steps every day lead to big results.</p></div>
+      <p class="muted tiny">WEB TECHNOLOGY PROJECT</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">YOUR LEARNING SPACE</p>
+        <h1 id="page-title">Dashboard</h1>
+      </div>
+      <label class="profile"><span class="avatar">S</span><span><strong id="profile-name">Student</strong><small>Learner</small></span></label>
+    </header>
+
+    <section class="welcome">
+      <div><p class="eyebrow light">MONDAY MOTIVATION</p><h2>Keep moving forward.</h2><p>Your next skill is one lesson away. Let's make today count.</p></div>
+      <div class="welcome-art" aria-hidden="true">✦</div>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card"><span class="stat-icon purple">▤</span><div><p>Enrolled Courses</p><h3 id="stat-enrolled">3</h3></div></article>
+      <article class="stat-card"><span class="stat-icon green">✓</span><div><p>Completed Courses</p><h3 id="stat-completed">0</h3></div></article>
+      <article class="stat-card"><span class="stat-icon orange">◎</span><div><p>Average Quiz Score</p><h3 id="stat-score">—</h3></div></article>
+      <article class="stat-card"><span class="stat-icon blue">♧</span><div><p>Certificates Earned</p><h3 id="stat-certs">0</h3></div></article>
+    </section>
+
+    <section class="content-grid">
+      <div class="panel course-panel">
+        <div class="section-heading"><div><p class="eyebrow">YOUR LEARNING PATH</p><h2>Continue learning</h2></div><button class="text-button" data-go="courses">View all →</button></div>
+        <div id="course-list" class="course-list"></div>
+      </div>
+      <div class="panel activity-panel">
+        <div class="section-heading"><div><p class="eyebrow">YOUR JOURNEY</p><h2>Recent activity</h2></div></div>
+        <div id="activity-list" class="activity-list"></div>
+        <div class="tip"><span>✦</span><div><strong>Learning tip</strong><p>Take a short quiz after each lesson to remember what you've learned.</p></div></div>
+      </div>
+    </section>
+
+    <section id="quiz-section" class="panel quiz-panel hidden">
+      <div class="section-heading"><div><p class="eyebrow">TEST YOUR KNOWLEDGE</p><h2 id="quiz-title">Quick quiz</h2></div><button id="close-quiz" class="text-button">← Back</button></div>
+      <div id="quiz-content"></div>
+    </section>
+
+    <section id="certificate-section" class="panel hidden">
+      <div class="section-heading"><div><p class="eyebrow">YOUR ACHIEVEMENTS</p><h2>Certificates</h2></div></div>
+      <div id="certificate-list" class="certificate-list"></div>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
